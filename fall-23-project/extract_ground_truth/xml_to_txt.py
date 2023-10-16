@@ -1,11 +1,9 @@
 import os
-import random
-import shutil
 from bs4 import BeautifulSoup
 import chardet
 
-source_directory = 'C:/Users/larak/OneDrive/Documents/History/1979'
-target_directory = 'C:/Users/larak/OneDrive/Documents/History/truth-data'
+source_directory = 'C:/Users/larak/OneDrive/Documents/History-Lab/truth_data/original_truth'
+target_directory = 'C:/Users/larak/OneDrive/Documents/History-Lab/truth_data/preprocessed_truth'
 
 # Ensure the target directory exists
 if not os.path.exists(target_directory):
@@ -16,18 +14,18 @@ def detect_file_encoding(file_path):
         rawdata = f.read()
     return chardet.detect(rawdata)['encoding']
 
-# Get a list of all .sgm files
-all_files = [f for f in os.listdir(source_directory) if f.endswith(".sgm")]
+# Randomly select 20 files -- the first time (in further script revisions, we use the initially sampled files)
+#source_directory = 'C:/Users/larak/OneDrive/Documents/History-Lab/1979'
+#all_files = [f for f in os.listdir(source_directory) if f.endswith(".sgm")]
+#selected_files = random.sample(all_files, 20)
+#for file in selected_files:
+#    shutil.move(os.path.join(source_directory, file), os.path.join(target_directory, file))
 
-# Randomly select 20 files
-selected_files = random.sample(all_files, 20)
-
-# Move the selected files to the target directory
-for file in selected_files:
-    shutil.move(os.path.join(source_directory, file), os.path.join(target_directory, file))
+# Use this once sampled files are already in target directory
+selected_files = [f for f in os.listdir(target_directory) if f.endswith(".sgm")]
 
 # Now, proceed with the extraction from files in the target directory
-for filename in os.listdir(target_directory):
+for filename in selected_files:
     filepath = os.path.join(target_directory, filename)
     file_encoding = detect_file_encoding(filepath)
 
@@ -36,11 +34,23 @@ for filename in os.listdir(target_directory):
 
         # Using BeautifulSoup to extract plain text
         soup = BeautifulSoup(content, "lxml")
-        plain_text = soup.get_text()
 
-        # Save plain text to a new .txt file with the same base name
-        output_filepath = os.path.join(target_directory, filename.replace('.sgm', '.txt'))
-        with open(output_filepath, 'w', encoding='utf-8') as output_file:
-            output_file.write(plain_text)
+        # Extracting text only from the doc.body tag
+        body_content = soup.find("doc.body")
+        
+        if body_content:  # To ensure there is a doc.body tag in the document
+            # Extract text with spaces added after each paragraph
+            plain_text = ' '.join([para.get_text() for para in body_content.find_all("para")])
+                    
+            # Replace /PRE> tag occurrences to match target file formatting
+            plain_text = plain_text.replace("/PRE>", "").strip()
+                    
+            # Replace multiple newlines with a single newline
+            plain_text = '\n'.join([line.strip() for line in plain_text.splitlines() if line.strip()])
+            
+            # Save plain text to a new .txt file with the same base name
+            output_filepath = os.path.join(target_directory, filename.replace('.sgm', '.txt'))
+            with open(output_filepath, 'w', encoding='utf-8') as output_file:
+                output_file.write(plain_text)
 
 print("Processing completed!")
