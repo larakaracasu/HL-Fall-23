@@ -13,7 +13,7 @@ def get_cer_from_chatgpt(reference, hypothesis):
               "please compute and provide the Character Error Rate (CER) as a single numerical value. "
               "The Character Error Rate (CER) is calculated as (Substitutions + Insertions + Deletions) / Total number of reference characters. "
               "Ensure the answer is a single number without any additional text.")
-    response = openai.Completion.create(model="text-davinci-003", prompt=prompt, max_tokens=5, n=1, temperature=0.1)
+    response = openai.Completion.create(model="text-davinci-003", prompt=prompt, max_tokens=1, n=1, temperature=0.1)
     
     try:
         cer = float(response.choices[0].text.strip())
