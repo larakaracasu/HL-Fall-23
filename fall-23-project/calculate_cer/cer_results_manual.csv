@@ -1,7 +1,6 @@
 Document,CER,Tokens (OCR),Length (OCR),Tokens (Truth),Length (Truth),Time
-
-207410.txt,0.1978,284,1431,292,1527,0.0000
-207451.txt,0.0960,2962,15228,2899,15921,0.8210
+207410.txt,0.1978,284,1431,292,1527,0
+207451.txt,0.096,2962,15228,2899,15921,0.821
 207514.txt,0.0635,2210,11744,2092,11718,0.4594
 207859.txt,0.1131,5297,28025,5067,29304,2.4994
 207897.txt,0.0972,6973,35459,6620,36566,4.2764
@@ -19,11 +18,11 @@ Document,CER,Tokens (OCR),Length (OCR),Tokens (Truth),Length (Truth),Time
 208850.txt,0.1718,4450,22030,3803,22556,1.6501
 208862.txt,0.2511,10116,47941,9114,52250,8.8488
 208941.txt,0.0888,12705,67983,11788,68693,17.0323
-208955.txt,0.1452,901,4804,825,4938,0.0790
-
-Average Character Error Rate for all documents,0.2162
-Total time to process all documents,280.1022 seconds
-Total tokens (OCR) for all documents,153133
-Total characters (OCR) for all documents,727372
-Total tokens (Truth) for all documents,132514
-Total characters (Truth) for all documents,795063
+208955.txt,0.1452,901,4804,825,4938,0.079
+,,,,,,
+Average Character Error Rate for all documents,0.2162,,,,,
+Total time to process all documents,280.1022 seconds,,,,,
+Total tokens (OCR) for all documents,153133,,,,,
+Total characters (OCR) for all documents,727372,,,,,
+Total tokens (Truth) for all documents,132514,,,,,
+Total characters (Truth) for all documents,795063,,,,,
