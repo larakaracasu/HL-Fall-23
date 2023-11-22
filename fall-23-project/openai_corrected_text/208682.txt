@@ -1,0 +1,26 @@
+velopment phase as soon as the _,uidelines of this memorandum are implemented. (2) (C) As a result of the DSARC II review, the ALCM is to be develoed for a range of at least 1500 nautical miles and is to be capable of carrying a 20000 pound payload. (3) (C) The TOMAHAWK is to be developed for a range of at least 800 nautical miles and is to be capable of carrying a 1500 pound payload. (4) (C) The GLCM is to be developed for a range of at least 500 nautical miles and is to be capable of carrying a 1000 pound payload.
+Corrected Hypothesis Text:  Memorandum for the Secretary of the Air Force, Secretary of the Navy, Chairman, Joint Chiefs of Staff, and Director, Defense Research & Engineering 
+
+Subject: Cruise Missile Programs 
+
+(U) As a result of the DSARC II review, the Air Force and the Navy are to be commended for the accomplishments to date of their respective cruise missile development programs of ALCM and TOMAHAWK. (U) A major issue before the DSARC was whether or not an air-launched cruise missile with a unique airframe should be allowed to proceed. In spite of the acquisition cost savings which would accrue from such a course of action, I have decided that a common airframe for all applications may impose unnecessary and unwarranted performance compromises on both weapon systems. However, considerable benefits still can be realized in joint test and evaluation, in quantity buy of common components, and in management efficiency, by consolidating two separate Air Force and Navy programs, now independently managed by different program offices. 
+
+(C) I, therefore, direct you to pursue with all vigor the cruise missile programs as follows. 
+
+a. (U) A Joint Service Cruise Missile Program Office (JSCMPO) is to be established with the Navy designated as the lead service and Captain Walter Locke as its immediate Manager. 
+
+b. (U) The JSCMPO, under the general direction of DDR&E, is to develop the ALCM and the TOMAHAWK cruise missile weapon systems for the Air Force and for the Navy. 
+
+c. (U) The first tasks of JSCMPO are to complete the PTE, leading to production decisions at DSARC III, of the ALCM for strategic bombers and the TOMAHAWK variants including the important Air Force ground-launched cruise missile application. Funding of these tasks is to be consolidated from the approved program elements P. B. 64361F, P. S. 63362F, P. E. 63361N, and P. S. 64367N. 
+
+d. (U) In conducting the above tasks, the JSCMPO is to maximize subsystem and component commonality and quantity buy, maximize utilization of joint test and evaluation, encourage subsystem/sourced component procurement, and to otherwise derive maximum benefits from the joint service management of several separable cruise missile programs. 
+
+e. (C) The Navy and Air Force are to submit jointly within 45 days from this date for DDR&E approval, the plan for establishing the JSCMPO and a set of program plans, schedules and milestones for the respective ALCM, TOMAHAWK and the Ground Launched Cruise Missile (GLCM), reflecting the following specific guidelines. A revised Air Force cost estimate for the ALCM program based on evaluation of contractor proposals is to be submitted at the same time. 
+
+(1) (C) The ALCM with a range of at least 1500 nautical miles is to enter its full development phase as soon as the guidelines of this memorandum are implemented. 
+
+(2) (C) As a result of the DSARC II review, the ALCM is to be developed for a range of at least 1500 nautical miles and is to be capable of carrying a 20,000 pound payload. 
+
+(3) (C) The TOMAHAWK is to be developed for a range of at least 800 nautical miles and is to be capable of carrying a 1,500 pound payload. 
+
+(4) (C) The GLCM is to be developed for a range of at least 500 nautical miles and is to be capable of carrying a 1,000 pound payload.

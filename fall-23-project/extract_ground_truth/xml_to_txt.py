@@ -35,14 +35,14 @@ for filename in selected_files:
         # Using BeautifulSoup to extract plain text
         soup = BeautifulSoup(content, "lxml")
 
-        # Extracting text only from the doc.body tag
+        # Extracting text only from the doc.body
         body_content = soup.find("doc.body")
         
-        if body_content:  # To ensure there is a doc.body tag in the document
+        if body_content:
             # Extract text with spaces added after each paragraph
             plain_text = ' '.join([para.get_text() for para in body_content.find_all("para")])
                     
-            # Replace /PRE> tag occurrences to match target file formatting
+            # Replace /PRE> tag occurrences
             plain_text = plain_text.replace("/PRE>", "").strip()
                     
             # Replace multiple newlines with a single newline
