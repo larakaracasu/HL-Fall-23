@@ -9,7 +9,9 @@ The project aims to assess the reliability of using langdetect library as heuris
 
 ### CER Calculation:
 The Character Error Rate (CER) are calculated using the editdistance library in Python. The library provides a fast C-based implementation of the Levenshtein distance, using the following formula:
-\[CER = \frac{Insertions + Deletions + Substitutions}{Total Characters in Ground Truth}\]
+
+CER = {Insertions + Deletions + Substitutions}/{Total Characters in Ground Truth}
+
 This measure provides an indication of how accurate the OCR text is compared to the ground truth.
 
 ### Determine CER Threshold for 'Garbled':
@@ -58,6 +60,7 @@ Set your OpenAI API key as an environment variable: export OPENAI_API_KEY=your_a
 python calculate_cer_openai_test.py
 ```
 
+**Directories:**
 ocr_dir: Directory containing preprocessed OCR documents.
 truth_dir: Directory containing preprocessed ground truth documents.
 results_file_csv: CSV file to store results.
