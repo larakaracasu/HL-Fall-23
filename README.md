@@ -35,11 +35,8 @@ A confusion matrix will be constructed using:
 Various accuracy metrics will be derived from the confusion matrix to assess LangDetect's performance in comparison to CER.
 
 ## Additional Considerations:
-- ChatGPT will also be employed in the project for OCR evaluation.
-- The project will involve experimentation with different approaches, including character-by-character processing and ChatGPT's embedding-based methods.
+- OpenAI models will be tested for OCR evaluation and text correction.
 - Local processing time will be monitored and recorded for performance evaluation.
-
-The project will provide insights into the alignment between langdetect heuristic and Character Error Rate in identifying "good" and "garbled" OCR outputs.
 
 # Important Files
 
