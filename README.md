@@ -55,9 +55,8 @@ The results, including CER, tokens, characters, and processing time for each doc
 Summary statistics and metrics are generated, including average CER, total processing time, and total tokens and characters for OCR and ground truth.
 
 **How to Run:**
-Set your OpenAI API key as an environment variable: export OPENAI_API_KEY=your_api_key
 ```bash
-python calculate_cer_openai_test.py
+python calculate_cer.py
 ```
 
 **Directories:**
@@ -83,7 +82,7 @@ Summary statistics and metrics are generated, including average CER, total proce
 **How to Run:**
 Set your OpenAI API key as an environment variable: export OPENAI_API_KEY=your_api_key
 ```bash
-python calculate_cer_openai_test.py
+python calculate_cer_openai.py
 ```
 
 **Directories:**
