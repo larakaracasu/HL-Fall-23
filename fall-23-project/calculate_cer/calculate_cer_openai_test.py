@@ -39,10 +39,11 @@ def write_to_file(filename, data):
         f.write(data)
 
 def main():
-    ocr_dir = "C:\\Users\\larak\\OneDrive\\Documents\\History-Lab\\ocr_data\\preprocessed_ocr"
-    truth_dir = "C:\\Users\\larak\\OneDrive\\Documents\\History-Lab\\truth_data\\preprocessed_truth"
-    results_file_csv = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\calculate_cer\\cer_results_openai_test.csv"
-    results_file_txt = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\calculate_cer\\cer_results_openai_test.txt"
+    
+    ocr_dir = os.environ["OCR_DATA_DIRECTORY"]
+    truth_dir = os.environ["TRUTH_DATA_DIRECTORY"]
+    results_file_csv = "cer_results_openai_test.csv"
+    results_file_txt = "cer_results_openai_test.txt"
     
     ocr_files = os.listdir(ocr_dir)
     

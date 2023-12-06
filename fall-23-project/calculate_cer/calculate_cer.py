@@ -6,6 +6,12 @@ import pandas as pd
 
 # nltk.download('punkt')
 
+# environment variables for directories
+ocr_dir = os.environ["OCR_DATA_DIRECTORY"]
+truth_dir = os.environ["TRUTH_DATA_DIRECTORY"]
+results_file_csv = "cer_results_manual.csv"
+results_file_txt = "cer_results_manual.txt"
+
 def calculate_cer(reference, hypothesis):
     distance = editdistance.eval(reference, hypothesis)
     return distance / len(reference)
@@ -24,11 +30,6 @@ def write_to_csv(filename, data):
         f.write(data)
 
 def main():
-    ocr_dir = "C:\\Users\\larak\\OneDrive\\Documents\\History-Lab\\ocr_data\\preprocessed_ocr"
-    truth_dir = "C:\\Users\\larak\\OneDrive\\Documents\\History-Lab\\truth_data\\preprocessed_truth"
-    results_file_csv = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\calculate_cer\\cer_results_manual.csv"
-    results_file_txt = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\calculate_cer\\cer_results_manual.txt"
-    
     ocr_files = os.listdir(ocr_dir)
     
     total_cer = 0
@@ -79,7 +80,7 @@ def main():
     results_data += f"Total tokens (Truth) for all documents,{total_tokens_truth}\n"
     results_data += f"Total characters (Truth) for all documents,{total_characters_truth}\n"
 
-    # Write to both CSV and text file
+    # Write to CSV and text files in the current directory
     write_to_file(results_file_txt, results_data)
     write_to_csv(results_file_csv, results_data)
     print(f"Results written to {results_file_csv}.")

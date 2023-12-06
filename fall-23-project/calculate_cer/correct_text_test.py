@@ -40,11 +40,13 @@ def write_to_csv(filename, data):
     df.to_csv(filename, index=False)
 
 def main():
-    ocr_dir = "C:\\Users\\larak\\OneDrive\\Documents\\History-Lab\\ocr_data\\preprocessed_ocr"
-    truth_dir = "C:\\Users\\larak\\OneDrive\\Documents\\History-Lab\\truth_data\\preprocessed_truth"
+
+    ocr_dir = os.environ["OCR_DATA_DIRECTORY"]
+    truth_dir = os.environ["TRUTH_DATA_DIRECTORY"]
+    results_file_csv = "cer_results_corrected.csv"
+    results_file_txt = "cer_results_corrected.txt"
+
     corrected_dir = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\openai_corrected_text\\"  # Added directory for corrected files
-    results_file_txt = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\calculate_cer\\cer_results_corrected.txt"
-    results_file_csv = "C:\\Users\\larak\\OneDrive\\Documents\\GitHub\\HL-Fall-23\\fall-23-project\\calculate_cer\\cer_results_corrected.csv"
     
     ocr_files = os.listdir(ocr_dir)
     
