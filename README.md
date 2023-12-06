@@ -42,6 +42,11 @@ Various accuracy metrics will be derived from the confusion matrix to assess Lan
 
 # Important Files
 
+Note: all Python files that read from ocr_dir or truth_dir, necessitate that you have OCR_DATA_DIR and TRUTH_DATA_DIR stored as environment variables on your machine. These environment variables should point to the path of your local folder containing the preprocessed OCRed files, and the preprocessed truth files, respectively. Thus:
+Set your preprocessed ocr data directory as an environment variable: export OCR_DATA_DIR=your_path_to_preprocessed_ocr_dir
+Set your preprocessed truth data directory as an environment variable: export TRUTH_DATA_DIR=your_path_to_preprocessed_truth_dir
+
+
 ## calculate_cer
 
 ### calculate_cer.py
