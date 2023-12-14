@@ -18,14 +18,14 @@ def get_edit_distance_from_openai(reference, hypothesis):
         edit_distance_openai = float(response.choices[0].text.strip())
     except ValueError:
         print(f"Unexpected response from GPT-3: {response.choices[0].text.strip()}")
-        edit_distance_openai = -1.0  # Default to a placeholder value
+        edit_distance_openai = -1.0  # Default to placeholder value
     return edit_distance_openai
 
 def get_nltk_edit_distance(reference, hypothesis):
-    return editdistance.eval(reference, hypothesis)
+    return editdistance.eval(reference[:5000], hypothesis[:5000])
 
 def calculate_cer(reference, edit_distance):
-    return edit_distance / len(reference)
+    return edit_distance / len(reference[:5000])
 
 def write_to_csv(filename, data):
     lines = data.strip().split('\n')
@@ -42,8 +42,8 @@ def main():
     
     ocr_dir = os.environ["OCR_DATA_DIRECTORY"]
     truth_dir = os.environ["TRUTH_DATA_DIRECTORY"]
-    results_file_csv = "cer_results_openai_test.csv"
-    results_file_txt = "cer_results_openai_test.txt"
+    results_file_csv = "cer_results_openai_test2.csv"
+    results_file_txt = "cer_results_openai_test2.txt"
     
     ocr_files = os.listdir(ocr_dir)
     
@@ -72,14 +72,15 @@ def main():
             num_chars_ref = len(truth_content)
             
             # Calculate edit distance using OpenAI
-            edit_distance_openai = get_edit_distance_from_openai(truth_content, ocr_content)
-            
+            #edit_distance_openai = get_edit_distance_from_openai(truth_content, ocr_content)
+            edit_distance_openai = 0
             # Calculate edit distance using NLTK
             edit_distance_nltk = get_nltk_edit_distance(truth_content, ocr_content)
             total_nltk_edit_distance += edit_distance_nltk
             
             start_time = time.time()
-            cer = calculate_cer(truth_content, edit_distance_openai)
+            #cer = calculate_cer(truth_content, edit_distance_openai)
+            cer = 0
             end_time = time.time()
 
             elapsed_time = end_time - start_time
