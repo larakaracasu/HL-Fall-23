@@ -1,6 +1,8 @@
-# Assessing OCR Evaluation Mechanisms: Fall '23, Columbia History Lab
+# Assessing OCR Evaluation Mechanisms for Columbia History Lab
 
 The project aims to assess the reliability of using langdetect library as heuristic for differentiating between accurate and garbled OCR outputs. Current OCR evaluation on COVID-19 collection applies langdetect and checks if the detected language is not English or if certainty <= 0.98. If so, the document is marked as an exception. The goal of this project is to determine if CER calculations and langdetect outputs agree on their classifications of accurate vs. inaccurate OCR documents.
+
+This is a project conducted for Columbia University's [History Lab](http://history-lab.org/).
 
 ## Contributors
 - Lara Karacasu
